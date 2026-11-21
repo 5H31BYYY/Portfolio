@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="sql-body" x1="22" y1="20" x2="106" y2="112" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#38bdf8" />
+      <stop offset="0.5" stop-color="#0284c7" />
+      <stop offset="1" stop-color="#1e3a8a" />
+    </linearGradient>
+    <linearGradient id="sql-top" x1="22" y1="14" x2="106" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7dd3fc" />
+      <stop offset="1" stop-color="#0ea5e9" />
+    </linearGradient>
+  </defs>
+  <path
+    d="M22 30v68c0 11 18.8 20 42 20s42-9 42-20V30H22Z"
+    fill="url(#sql-body)"
+  />
+  <ellipse cx="64" cy="30" rx="42" ry="16" fill="url(#sql-top)" />
+  <path
+    d="M22 54c0 9 18.8 16 42 16s42-7 42-16"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="3.5"
+    stroke-opacity="0.4"
+  />
+  <path
+    d="M22 76c0 9 18.8 16 42 16s42-7 42-16"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="3.5"
+    stroke-opacity="0.35"
+  />
+  <rect x="26" y="56" width="76" height="36" rx="8" fill="#0f172a" fill-opacity="0.88" />
+  <text
+    x="64"
+    y="82"
+    text-anchor="middle"
+    fill="#ffffff"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="26"
+    font-weight="700"
+    letter-spacing="1.5"
+  >SQL</text>
+</svg>

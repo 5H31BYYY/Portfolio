@@ -1,0 +1,12 @@
+{
+  "title": "PHAUT Sovannvatanak — AI & Data Portfolio",
+  "description": "Portfolio of PHAUT Sovannvatanak, an Artificial Intelligence and English Literature student in Phnom Penh exploring data analytics, machine learning, and clear visual storytelling.",
+  "language": "en",
+  "robots": {
+    "index": true
+  },
+  "accessibility": {
+    "addBypassLinks": true,
+    "ignoreReducedMotion": false
+  }
+}

@@ -1,66 +1,90 @@
-# Nak — Portfolio
+# PHAUT Sovannvatanak — Portfolio
 
-A personal portfolio website for **PHAUT Sovannvatanak**, an AI student and developer based in Phnom Penh, Cambodia. The site introduces me, highlights selected projects and skills, and provides ways to get in touch.
+Personal portfolio for PHAUT Sovannvatanak, an Artificial Intelligence and English Literature student based in Phnom Penh, Cambodia.
 
-**Built with:** HTML, CSS, and vanilla JavaScript. There is no build step or framework dependency.
+## Tech stack
 
-## Features
-
-- Responsive layout with a collapsible mobile navigation menu
-- Dark and light themes, with the selected theme saved in the browser
-- Animated hero text and particle background
-- Scroll based section reveals and active navigation state
-- Project filters for analytics and machine learning work
-- Clickable project screenshots with an enlarged preview
-- Contact links and a link to my CV
-- Reduced motion support for visitors who prefer less animation
-
-## Projects
-
-- **Power BI Dashboard** — Sales analytics dashboard with interactive slicers, charts, and trend analysis.
-- **Excel Dashboard** — Interactive sales dashboard with KPI cards, monthly trends, category breakdowns, performance views, and a geographic profit map.
-- **Diabetes Risk Predictor** — R Shiny app that estimates diabetes risk from health metrics using a random forest model.
-
-Project links open the hosted project or app. Some Microsoft projects may ask visitors to sign in, depending on their sharing permissions.
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS 4
+- Local SVG technology icons
 
 ## Run locally
 
-Clone or download this repository, then open `index.html` in a browser. No dependencies need to be installed.
+Requirements:
 
-Alternatively, from the repository folder, start a simple local server:
+- Node.js 22
+- pnpm 10
 
 ```bash
-python -m http.server 8000
+pnpm install
+pnpm dev
 ```
 
-Then visit <http://localhost:8000>.
+Open the local URL shown in the terminal.
 
-## Publish with GitHub Pages
+## Production build
 
-1. Push these site files to a GitHub repository. Keep `index.html`, `style.css`, `script.js`, and the image assets together in the publishing folder.
-2. In the repository, open **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**, then select the branch and the `/ (root)` folder. Save the settings.
-4. After GitHub finishes deploying, the site URL will appear in the Pages settings. A project site is usually available at `https://<username>.github.io/<repository>/`.
+```bash
+pnpm build
+```
 
-GitHub's instructions: [Configuring a publishing source for GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+The deployable site is generated in `dist/`.
 
-## Repository files
+## Push to GitHub
+
+Create an empty GitHub repository, then run these commands from the project folder:
+
+```bash
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git branch -M main
+git push -u origin main
+```
+
+Replace `YOUR_USERNAME` and `YOUR_REPOSITORY` with your GitHub details. Do not commit `node_modules/` or `dist/`; both are already excluded by `.gitignore`.
+
+## Deploy to Vercel
+
+1. Sign in to Vercel.
+2. Select **Add New → Project**.
+3. Import the GitHub repository.
+4. Vercel will detect the included Vite configuration.
+5. Select **Deploy**.
+
+The included `vercel.json` configures:
+
+- Install command: `pnpm install --frozen-lockfile`
+- Build command: `pnpm build`
+- Output directory: `dist`
+
+No environment variables are required.
+
+## Main files
 
 ```text
-.
-├── index.html       # Portfolio content and page structure
-├── style.css        # Themes, layout, animation, and responsive styles
-├── script.js        # Navigation, theme, typing, filters, and interactions
-├── image.png        # Hero photo
-├── power_bi.png     # Power BI project screenshot
-├── excel.png        # Excel project screenshot
-├── r.png            # R Shiny project screenshot
-└── favicon.svg      # Browser tab icon
+src/App.tsx             Portfolio content and interactions
+src/index.css           Global styles, themes, and responsive layouts
+src/main.tsx            React entry point
+public/tech-icons/      Local technology SVG icons
+public/profile-photo.jpg Optional personal portrait
+public/favicon.png      Browser icon
+package.json            Dependencies and scripts
+pnpm-lock.yaml          Reproducible dependency versions
+vite.config.ts          Vite build configuration
+vercel.json             Vercel deployment configuration
 ```
 
-## Customize
+## Personal links
 
-- Edit the text, project links, and contact details in `index.html`.
-- Update colors and layout in `style.css`.
-- Change the animated phrases and interactive behavior in `script.js`.
-- Replace the image assets with your own, keeping the filenames or updating their references in `index.html`.
+The project currently includes links to the portfolio owner's email, Telegram, GitHub, LinkedIn, CV, Power BI dashboard, Excel dashboard, and diabetes risk predictor. Update these URLs in `src/App.tsx` if they change.
+
+## Add your portrait
+
+Place your photo at:
+
+```text
+public/profile-photo.jpg
+```
+
+Use a vertical portrait if possible. A 4:5 image around `1200 × 1500` pixels works well. The portfolio shows a designed `PSV` fallback until the photo is added.
