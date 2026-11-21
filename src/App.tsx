@@ -941,7 +941,7 @@ export default function App() {
         <p>Exploring AI, analytics, and literature.</p>
         <div className="footer-links">
           <a
-            href="https://github.com/5H13BYYY/"
+            href="https://github.com/5H31BYYY/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
